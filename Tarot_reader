@@ -2,10 +2,8 @@ from PIL import Image
 
 
 def tarot(card):
-    fool= Image.open("tarot-fool.jpg");
     if card == 'The Fool':
         card_meaning=("UPRIGHT: Beginnings, innocence, spontaneity, a free spirit REVERSED: Holding back, recklessness, risk-taking")
-        image=fool
     elif card == 'The Magician':
         card_meaning=("UPRIGHT: Manifestation, resourcefulness, power, inspired action REVERSED: Manipulation, poor planning, untapped talents")
     elif card == 'The High Priestess':
@@ -51,7 +49,6 @@ def tarot(card):
     else:
         card_meaning=("Make sure to capitalize the card name.")
     return card_meaning
-    return image
 def print_msg_box(msg, indent=1, width=None, title=None):
     """Print message-box with optional title."""
     lines = msg.split('\n')
@@ -65,8 +62,15 @@ def print_msg_box(msg, indent=1, width=None, title=None):
     box += ''.join([f'║{space}{line:<{width}}{space}║\n' for line in lines])
     box += f'╚{"═" * (width + indent * 2)}╝'  # lower_border
     print(box)
+def image_pull(card_title):
+    if card_title == 'The Fool':
+        card_image= Image.open("tarot-fool.jpg")
+    else:
+        print("error.")
+    return card_image
 
 card_name=input("Hello enter the card name you want to look up. Make sure to capitalize each letter of the card name:")
 card_print=tarot(card_name)
+image=image_pull(card_name)
 print_msg_box(card_print)
-image.show();
+image.show()
