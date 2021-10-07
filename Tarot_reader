@@ -21,7 +21,7 @@ def tarot(card):
     elif card == 'Strength':
         card_meaning=("UPRIGHT: Strength, courage, persuasion, influence, compassion REVERSED: Inner strength, self-doubt, low energy, raw emotion")
     elif card == 'Hermit':
-        card_meaning=t("UPRIGHT: Soul-searching, introspection, being alone, inner guidance REVERSED: Isolation, loneliness, withdrawal")
+        card_meaning=("UPRIGHT: Soul-searching, introspection, being alone, inner guidance REVERSED: Isolation, loneliness, withdrawal")
     elif card == 'Wheel Of Fortune':
         card_meaning=("UPRIGHT: Good luck, karma, life cycles, destiny, a turning point REVERSED: Bad luck, resistance to change, breaking cycles")
     elif card == 'Justice':
@@ -65,6 +65,44 @@ def print_msg_box(msg, indent=1, width=None, title=None):
 def image_pull(card_title):
     if card_title == 'The Fool':
         card_image= Image.open("tarot-fool.jpg")
+    elif card_title == 'The Magician':
+        card_image= Image.open("tarot-magician.jpg")
+    elif card_title == 'The High Priestess':
+        card_image = Image.open("tarot-highpriestess.jpg")
+    elif card_title == 'The Empress':
+        card_image = Image.open("tarot-empress.jpg")
+    elif card_title == 'The Emperor':
+        card_image = Image.open("tarot-emperor.jpg")
+    elif card_title == 'The Hierophant':
+        card_image = Image.open("tarot-hierophant.jpg")
+    elif card_title == 'The Lovers':
+        card_image = Image.open("tarot-lovers.jpg")
+    elif card_title == 'The Chariot':
+        card_image = Image.open("tarot-chariot.jpg")
+    elif card_title == 'Strength':
+        card_image = Image.open("tarot-strength.jpg")
+    elif card_title == 'Hermit':
+        card_image = Image.open("tarot-hermit.jpg")
+    elif card_title == 'Wheel Of Fortune':
+        card_image = Image.open("tarot-wheeloffortune.jpg")
+    elif card_title == 'Justice':
+        card_image = Image.open("tarot-justice.jpg")
+    elif card_title == 'Hanged Man':
+        card_image = Image.open("tarot-hangedman.jpg")
+    elif card_title == 'Death':
+        card_image = Image.open("tarot-death.jpg")
+    elif card_title == 'Tower':
+        card_image = Image.open("tarot-tower.jpg")
+    elif card_title == 'Star':
+        card_image = Image.open("tarot-star.jpg")
+    elif card_title == 'Moon':
+        card_image = Image.open("tarot-moon.jpg")
+    elif card_title == 'Sun':
+        card_image = Image.open("tarot-sun.jpg")
+    elif card_title == 'Judgement':
+        card_image = Image.open("tarot-judgement.jpg")
+    elif card_title == 'World':
+        card_image = Image.open("tarot-world.jpg")
     else:
         print("error.")
     return card_image
