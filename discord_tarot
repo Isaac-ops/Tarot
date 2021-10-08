@@ -1,0 +1,100 @@
+from random import randint
+
+card_1=1
+#randint(1,44)
+#card_2=randint(1,44)
+#card_3=randint(1,44)
+print("The Past:")
+if card_1 == 1:
+    print("The Fool upright-Beginnings, innocence, spontaneity, a free spirit.")
+elif card_1 == 2:
+    print("The Fool reversed-Holding back, recklessness, risk-taking")
+elif card_1 == 3:
+    print("The Magician upright-Manifestation, resourcefulness, power, inspired action")
+elif card_1 == 4:
+    print("The Magician reversed-Manipulation, poor planning, untapped talents")
+elif card_1 == 5:
+    print("The High Priestess upright-Intuition, sacred knowledge, divine feminine, the subconscious mind")
+elif card_1 == 6:
+    print("The High Priestess reverse-Secrets, disconnected from intuition, withdrawal and silence")
+elif card_1 == 7:
+    print("The Empress upright-Femininity, beauty, nature, nurturing, abundance")
+elif card_1 == 8:
+    print("The Empress reverse-Creative block, dependence on others")
+elif card_1 == 9:
+    print("The Emperor upright-Authority, establishment, structure, a father figure")
+elif card_1 == 10:
+    print("The Emperor reverse-Domination, excessive control, lack of discipline, inflexibility")
+elif card_1 == 11:
+    print("The Hierophant upright-Spiritual wisdom, religious beliefs, conformity, tradition,institutions")
+elif card_1 == 12:
+    print("The Hierophant reverse-Personal beliefs, freedom, challenging the status quo")
+elif card_1 == 13:
+    print("The Lovers upright-Love, harmony, relationships, values alignment, choices")
+elif card_1 == 14:
+    print("The Lovers reverse-Self-love, disharmony, imbalance, misalignment of values")
+elif card_1 == 15:
+    print("The Chariot upright-Control, willpower, success, action, determination")
+elif card_1 == 16:
+
+elif card_1 == 17:
+
+elif card_1 == 18:
+
+elif card_1 == 19:
+
+elif card_1 == 20:
+
+elif card_1 == 21:
+
+elif card_1 == 22:
+
+elif card_1 == 23:
+
+elif card_1 == 24:
+
+elif card_1 == 25:
+
+elif card_1 == 26:
+
+elif card_1 == 27:
+
+elif card_1 == 28:
+
+elif card_1 == 29:
+
+elif card_1 == 30:
+
+elif card_1 == 31:
+
+elif card_1 == 32:
+
+elif card_1 == 33:
+
+elif card_1 == 34:
+
+elif card_1 == 35:
+
+elif card_1 == 36:
+
+elif card_1 == 37:
+
+elif card_1 == 38:
+
+elif card_1 == 39:
+
+elif card_1 == 40:
+
+elif card_1 == 41:
+
+elif card_1 == 42:
+
+elif card_1 == 43:
+
+elif card_1 == 44:
+else:
+    print('error')
+
+
+
+card_2=randint(1,44)
