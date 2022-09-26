@@ -1,7 +1,5 @@
 from PIL import Image
 
-from PIL import Image
-
 
 def tarot(card):
     if card == 'The Fool':
@@ -114,13 +112,22 @@ def print_msg_box(msg, indent=1, width=None, title=None):
     box += ''.join([f'Q{space}{line:<{width}}{space}Q\n' for line in lines])
     box += f'Z{"P" * (width + indent * 2)}]'  # lower_border
     print(box)
-def image_pull(card_title):
-    if card_title == 'The Fool':
-        card_image= Image.open("tarot-fool.jpg")
+def image_pull_1(card_title):
+    if card_title == 1:
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-fool.jpg")
+        img.paste(img2, (50,50))
+        card_image = img.save("First_card.jpg")
     elif card_title == 'The Magician':
-        card_image= Image.open("tarot-magician.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-magician.jpg")
+        img.paste(img2, (50,50))
+        card_image = img.save("First_card.jpg")
     elif card_title == 'The High Priestess':
-        card_image = Image.open("tarot-highpriestess.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-highpriestess.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'The Empress':
         card_image = Image.open("tarot-empress.jpg")
     elif card_title == 'The Emperor':
