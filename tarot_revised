@@ -177,13 +177,25 @@ def image_pull_1(card_title):
         card_image = Image.open("First_card.jpg")
         card_image = Image.open("tarot-justice.jpg")
     elif card_title == 'Hanged Man':
-        card_image = Image.open("tarot-hangedman.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-hangedman.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'Death':
-        card_image = Image.open("tarot-death.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-death.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'Tower':
-        card_image = Image.open("tarot-tower.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-tower.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'Star':
-        card_image = Image.open("tarot-star.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-star.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'Moon':
         img = Image.open("picture.jpg")
         img2 = Image.open("tarot-moon.jpg")
