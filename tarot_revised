@@ -146,16 +146,35 @@ def image_pull_1(card_title):
         img.paste(img2, (50,50))
         card_image = Image.open("First_card.jpg")
     elif card_title == 'The Lovers':
-        card_image = Image.open("tarot-lovers.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-lovers.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'The Chariot':
-        card_image = Image.open("tarot-chariot.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-chariot.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'Strength':
-        card_image = Image.open("tarot-strength.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-strength.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'Hermit':
-        card_image = Image.open("tarot-hermit.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-hermit.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'Wheel Of Fortune':
-        card_image = Image.open("tarot-wheeloffortune.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-wheeloffortune.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'Justice':
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-justice.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
         card_image = Image.open("tarot-justice.jpg")
     elif card_title == 'Hanged Man':
         card_image = Image.open("tarot-hangedman.jpg")
