@@ -1,4 +1,4 @@
-from PIL import Image
+from random import randint
 
 from PIL import Image
 
@@ -459,21 +459,31 @@ def image_pull_3(card_title):
         print("error.")
     return card_image
 
-card_name=input("Hello enter the card name you want to look up. Make sure to capitalize each letter of the card name:")
-card_print=tarot(card_name)
-image=image_pull_1(card_name)
-print_msg_box(card_print)
-image.show()
+card_1=randint(1,22)
+card_2=randint(1,22)
+card_3=randint(1,22)
 
-def main():
-    try:
-        img = Image.open("picture.jpg")
-        img2 = Image.open("picture2.jpg")
-        img.paste(img2, (50,50))
-        img.save("pasted_picture.jpg")
+image_pull_1(card_1)
+image_pull_2(card_2)
+image_pull_3(card_3)
 
-    except IOError:
-        pass
+Image.show("Final_card.jpg")
 
-if __name__=='__main__':
-    main()
+#card_name=input("Hello enter the card name you want to look up. Make sure to capitalize each letter of the card name:")
+#card_print=tarot(card_name)
+#image=image_pull_1(card_name)
+#print_msg_box(card_print)
+#image.show()
+
+#def main():
+#    try:
+#        img = Image.open("picture.jpg")
+#        img2 = Image.open("picture2.jpg")
+#        img.paste(img2, (50,50))
+#        img.save("pasted_picture.jpg")
+#
+#    except IOError:
+#        pass
+
+#if __name__=='__main__':
+#    main()
