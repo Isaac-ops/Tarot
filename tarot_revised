@@ -1,5 +1,7 @@
 from PIL import Image
 
+from PIL import Image
+
 
 def tarot(card):
     if card == 'The Fool':
@@ -129,11 +131,20 @@ def image_pull_1(card_title):
         img.paste(img2, (50,50))
         card_image = Image.open("First_card.jpg")
     elif card_title == 'The Empress':
-        card_image = Image.open("tarot-empress.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-empress.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'The Emperor':
-        card_image = Image.open("tarot-emperor.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-emperor.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'The Hierophant':
-        card_image = Image.open("tarot-hierophant.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-hierophant.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'The Lovers':
         card_image = Image.open("tarot-lovers.jpg")
     elif card_title == 'The Chariot':
@@ -155,13 +166,25 @@ def image_pull_1(card_title):
     elif card_title == 'Star':
         card_image = Image.open("tarot-star.jpg")
     elif card_title == 'Moon':
-        card_image = Image.open("tarot-moon.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-moon.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'Sun':
-        card_image = Image.open("tarot-sun.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-sun.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'Judgement':
-        card_image = Image.open("tarot-judgement.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-judgement.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     elif card_title == 'World':
-        card_image = Image.open("tarot-world.jpg")
+        img = Image.open("picture.jpg")
+        img2 = Image.open("tarot-world.jpg")
+        img.paste(img2, (50,50))
+        card_image = Image.open("First_card.jpg")
     else:
         print("error.")
     return card_image
