@@ -1,6 +1,6 @@
 from random import randint
 
-from PIL import Image
+from PIL import Image, ImageFont, ImageDraw 
 
 
 def tarot(card):
@@ -899,15 +899,49 @@ def image_pull_3(card_title):
         print("error.")
     return
 
-card_1=randint(1,22)
-card_2=randint(1,22)
-card_3=randint(1,22)
+card_1=randint(1,44)
+card_2=randint(1,44)
+card_3=randint(1,44)
 
 image_pull_1(card_1)
 image_pull_2(card_2)
 image_pull_3(card_3)
 
+card_1_meaning=card_value_meaning(card_1)
+card_2_meaning=card_value_meaning(card_2)
+card_3_meaning=card_value_meaning(card_3)
+
+results_font= ImageFont.truetype('tff title',200)
+results_title="Card meanings"
+past_card_meaning="Past: {}".format(card_1_meaning)
+present_card_meaning="Present: {}".format(card_2_meaning)
+future_card_meaning="Future: {}".format(card_3_meaning)
+
+results= Image.open('results.jpg')
+image_editable = ImageDraw.Draw(results)
+image_editable.text((15,15), results_title, (15,17,18),font=results_font) 
+results.save("results_title.jpg")
+
+past_results = Image.open('results_title.jpg')
+image_editable = ImageDraw.Draw(past_results)
+image_editable.text((30,30), past_card_meaning, (15,17,18), font=results_font)
+past_results.save('past_results.jpg')
+
+present_results = Image.open('past_results.jpg')
+image_editable = ImageDraw.Draw(present_results)
+image_editable.text((45,45), present_card_meaning, (15,17,18), font=results_font)
+present_results.save('present_results.jpg')
+
+final_results = Image.open('present_results.jpg')
+image_editable = ImageDraw.Draw(final_results)
+image_editable.text((60,60), future_card_meaning, (15,17,18), font=results_font)
+final_results.save('final_results.jpg')
+
+Ending_results=Image.open('final_results.jpg')
+
 Final=Image.open("Final_card.jpg")
+Final.paste(Ending_results(900,50))
+Final.save()
 Final.show()
 
 #card_name=input("Hello enter the card name you want to look up. Make sure to capitalize each letter of the card name:")
