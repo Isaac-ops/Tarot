@@ -3,144 +3,95 @@ from random import randint
 from PIL import Image, ImageFont, ImageDraw 
 
 
-def tarot(card):
-    if card == 'The Fool':
-        card_meaning=("UPRIGHT: Beginnings, innocence, spontaneity, a free spirit REVERSED: Holding back, recklessness, risk-taking")
-    elif card == 'The Magician':
-        card_meaning=("UPRIGHT: Manifestation, resourcefulness, power, inspired action REVERSED: Manipulation, poor planning, untapped talents")
-    elif card == 'The High Priestess':
-        card_meaning=("UPRIGHT: Intuition, sacred knowledge, divine feminine, the subconscious mind REVERSED: Secrets, disconnected from intuition, withdrawal and silence")
-    elif card == 'The Empress':
-        card_meaning=("UPRIGHT: Femininity, beauty, nature, nurturing, abundance REVERSED: Creative block, dependence on others")
-    elif card == 'The Emperor':
-       card_meaning=("UPRIGHT: Authority, establishment, structure, a father figure REVERSED: Domination, excessive control, lack of discipline, inflexibility")
-    elif card == 'The Hierophant':
-        card_meaning=("UPRIGHT: Spiritual wisdom, religious beliefs, conformity, tradition,institutions REVERSED: Personal beliefs, freedom, challenging the status quo")
-    elif card == 'The Lovers':
-        card_meaning=("UPRIGHT: Love, harmony, relationships, values alignment, choices REVERSED: Self-love, disharmony, imbalance, misalignment of values")
-    elif card == 'The Chariot':
-        card_meaning=("UPRIGHT: Control, willpower, success, action, determination REVERSED: Self-discipline, opposition, lack of direction")
-    elif card == 'Strength':
-        card_meaning=("UPRIGHT: Strength, courage, persuasion, influence, compassion REVERSED: Inner strength, self-doubt, low energy, raw emotion")
-    elif card == 'Hermit':
-        card_meaning=("UPRIGHT: Soul-searching, introspection, being alone, inner guidance REVERSED: Isolation, loneliness, withdrawal")
-    elif card == 'Wheel Of Fortune':
-        card_meaning=("UPRIGHT: Good luck, karma, life cycles, destiny, a turning point REVERSED: Bad luck, resistance to change, breaking cycles")
-    elif card == 'Justice':
-        card_meaning=("UPRIGHT: Justice, fairness, truth, cause and effect, law REVERSED: Unfairness, lack of accountability, dishonesty")
-    elif card == 'Hanged Man':
-        card_meaning=("UPRIGHT: Pause, surrender, letting go, new perspectives REVERSED: Delays, resistance, stalling, indecision")
-    elif card == 'Death':
-        card_meaning=("UPRIGHT: Endings, change, transformation, transition REVERSED: Resistance to change, personal transformation, inner purging")
-    elif card == 'Temperance':
-        card_meaning=("UPRIGHT: Balance, moderation, patience, purpose REVERSED: Imbalance, excess, self-healing, re-alignment")
-    elif card == 'Devil':
-        card_meaning=("UPRIGHT: Shadow self, attachment, addiction, restriction, sexuality REVERSED: Releasing limiting beliefs, exploring dark thoughts, detachment")
-    elif card == 'Tower':
-        card_meaning=("UPRIGHT: Sudden change, upheaval, chaos, revelation, awakening REVERSED: Personal transformation, fear of change, averting disaster")
-    elif card == 'Star':
-        card_meaning=("UPRIGHT: Hope, faith, purpose, renewal, spirituality REVERSED: Lack of faith, despair, self-trust, disconnection")
-    elif card == 'Moon':
-        card_meaning=("UPRIGHT: Illusion, fear, anxiety, subconscious, intuition REVERSED: Release of fear, repressed emotion, inner confusion")
-    elif card == 'Sun':
-        card_meaning=("UPRIGHT: Positivity, fun, warmth, success, vitality REVERSED: Inner child, feeling down, overly optimistic")
-    elif card == 'Judgement':
-        card_meaning=("UPRIGHT: Judgement, rebirth, inner calling, absolution REVERSED: Self-doubt, inner critic, ignoring the call")
-    elif card == 'World':
-        card_meaning=("UPRIGHT: Completion, integration, accomplishment, travel REVERSED: Seeking personal closure, short-cuts, delays")
-    else:
-        card_meaning=("Make sure to capitalize the card name.")
-    return card_meaning
-
 def card_value_meaning(card_value):
     if card_value == 1:
-        card_meaning=("UPRIGHT: Beginnings, innocence, spontaneity, a free spirit")
+        card_meaning=("Beginnings, innocence, spontaneity, a free spirit")
     elif card_value == 2: 
-        card_meaning=("REVERSED: Holding back, recklessness, risk-taking")
+        card_meaning=("Holding back, recklessness, risk-taking")
     elif card_value == 3:
-        card_meaning=("UPRIGHT: Manifestation, resourcefulness, power, inspired action")
+        card_meaning=("Manifestation, resourcefulness, power, inspired action")
     elif card_value == 4: 
-        card_meaning=("REVERSED: Manipulation, poor planning, untapped talents")
+        card_meaning=("Manipulation, poor planning, untapped talents")
     elif card_value == 5:
-        card_meaning=("UPRIGHT: Intuition, sacred knowledge, divine feminine, the subconscious mind") 
+        card_meaning=("Intuition, sacred knowledge, divine feminine, the subconscious mind") 
     elif card_value == 6:
         card_meaning=("REVERSED: Secrets, disconnected from intuition, withdrawal and silence")
     elif card_value == 7:
-        card_meaning=("UPRIGHT: Femininity, beauty, nature, nurturing, abundance")
+        card_meaning=("Femininity, beauty, nature, nurturing, abundance")
     elif card_value == 8: 
-        card_meaning=("REVERSED: Creative block, dependence on others")
+        card_meaning=("Creative block, dependence on others")
     elif card_value == 9:
-       card_meaning=("UPRIGHT: Authority, establishment, structure, a father figure")
+       card_meaning=("Authority, establishment, structure, a father figure")
     elif card_value == 10: 
-       card_meaning=("REVERSED: Domination, excessive control, lack of discipline, inflexibility")
+       card_meaning=("Domination, excessive control, lack of discipline, inflexibility")
     elif card_value == 11:
-        card_meaning=("UPRIGHT: Spiritual wisdom, religious beliefs, conformity, tradition,institutions") 
+        card_meaning=("Spiritual wisdom, religious beliefs, conformity, tradition,institutions") 
     elif card_value == 12:    
-        card_meaning=("REVERSED: Personal beliefs, freedom, challenging the status quo")
+        card_meaning=("Personal beliefs, freedom, challenging the status quo")
     elif card_value == 13:
-        card_meaning=("UPRIGHT: Love, harmony, relationships, values alignment, choices")
+        card_meaning=("Love, harmony, relationships, values alignment, choices")
     elif card_value == 14: 
-        card_meaning=("REVERSED: Self-love, disharmony, imbalance, misalignment of values")
+        card_meaning=("Self-love, disharmony, imbalance, misalignment of values")
     elif card_value == 15:
-        card_meaning=("UPRIGHT: Control, willpower, success, action, determination") 
+        card_meaning=("Control, willpower, success, action, determination") 
     elif card_value == 16:    
-        card_meaning=("REVERSED: Self-discipline, opposition, lack of direction")
+        card_meaning=("Self-discipline, opposition, lack of direction")
     elif card_value == 17:
-        card_meaning=("UPRIGHT: Strength, courage, persuasion, influence, compassion") 
+        card_meaning=("Strength, courage, persuasion, influence, compassion") 
     elif card_value == 18:    
-        card_meaning=("REVERSED: Inner strength, self-doubt, low energy, raw emotion")
+        card_meaning=("Inner strength, self-doubt, low energy, raw emotion")
     elif card_value == 19:
-        card_meaning=("UPRIGHT: Soul-searching, introspection, being alone, inner guidance") 
+        card_meaning=("Soul-searching, introspection, being alone, inner guidance") 
     elif card_value == 20:    
-        card_meaning=("REVERSED: Isolation, loneliness, withdrawal")
+        card_meaning=("Isolation, loneliness, withdrawal")
     elif card_value == 21:
-        card_meaning=("UPRIGHT: Good luck, karma, life cycles, destiny, a turning point")
+        card_meaning=("Good luck, karma, life cycles, destiny, a turning point")
     elif card_value == 22:
-        card_meaning=("REVERSED: Bad luck, resistance to change, breaking cycles")
+        card_meaning=("Bad luck, resistance to change, breaking cycles")
     elif card_value == 23:
-        card_meaning=("UPRIGHT: Justice, fairness, truth, cause and effect, law")
+        card_meaning=("Justice, fairness, truth, cause and effect, law")
     elif card_value == 24: 
-        card_meaning=("REVERSED: Unfairness, lack of accountability, dishonesty")
+        card_meaning=("Unfairness, lack of accountability, dishonesty")
     elif card_value == 25:
-        card_meaning=("UPRIGHT: Pause, surrender, letting go, new perspectives")
+        card_meaning=("Pause, surrender, letting go, new perspectives")
     elif card_value == 26: 
-        card_meaning=("REVERSED: Delays, resistance, stalling, indecision")
+        card_meaning=("Delays, resistance, stalling, indecision")
     elif card_value == 41:
-        card_meaning=("UPRIGHT: Endings, change, transformation, transition ")
+        card_meaning=("Endings, change, transformation, transition ")
     elif card_value == 42:
-        card_meaning=("REVERSED: Resistance to change, personal transformation, inner purging")
+        card_meaning=("Resistance to change, personal transformation, inner purging")
     elif card_value == 43:
-        card_meaning=("UPRIGHT: Balance, moderation, patience, purpose")
+        card_meaning=("Balance, moderation, patience, purpose")
     elif card_value == 44: 
-        card_meaning=("REVERSED: Imbalance, excess, self-healing, re-alignment")
+        card_meaning=("Imbalance, excess, self-healing, re-alignment")
     elif card_value == 27:
-        card_meaning=("UPRIGHT: Shadow self, attachment, addiction, restriction, sexuality")
+        card_meaning=("Shadow self, attachment, addiction, restriction, sexuality")
     elif card_value == 28: 
-        card_meaning=("REVERSED: Releasing limiting beliefs, exploring dark thoughts, detachment")
+        card_meaning=("Releasing limiting beliefs, exploring dark thoughts, detachment")
     elif card_value == 29:
-        card_meaning=("UPRIGHT: Sudden change, upheaval, chaos, revelation, awakening")
+        card_meaning=("Sudden change, upheaval, chaos, revelation, awakening")
     elif card_value == 30: 
-        card_meaning=("REVERSED: Personal transformation, fear of change, averting disaster")
+        card_meaning=("Personal transformation, fear of change, averting disaster")
     elif card_value == 31:
-        card_meaning=("UPRIGHT: Hope, faith, purpose, renewal, spirituality")
+        card_meaning=("Hope, faith, purpose, renewal, spirituality")
     elif card_value == 32: 
-        card_meaning=("REVERSED: Lack of faith, despair, self-trust, disconnection")
+        card_meaning=("Lack of faith, despair, self-trust, disconnection")
     elif card_value == 33:
-        card_meaning=("UPRIGHT: Illusion, fear, anxiety, subconscious, intuition")
+        card_meaning=("Illusion, fear, anxiety, subconscious, intuition")
     elif card_value == 34: 
-        card_meaning=("REVERSED: Release of fear, repressed emotion, inner confusion")
+        card_meaning=("Release of fear, repressed emotion, inner confusion")
     elif card_value == 35:
-        card_meaning=("UPRIGHT: Positivity, fun, warmth, success, vitality")
+        card_meaning=("Positivity, fun, warmth, success, vitality")
     elif card_value == 36: 
-        card_meaning=("REVERSED: Inner child, feeling down, overly optimistic")
+        card_meaning=("Inner child, feeling down, overly optimistic")
     elif card_value == 37:
-        card_meaning=("UPRIGHT: Judgement, rebirth, inner calling, absolution")
+        card_meaning=("Judgement, rebirth, inner calling, absolution")
     elif card_value == 38: 
-        card_meaning=("REVERSED: Self-doubt, inner critic, ignoring the call")
+        card_meaning=("Self-doubt, inner critic, ignoring the call")
     elif card_value == 39:
-        card_meaning=("UPRIGHT: Completion, integration, accomplishment, travel")
+        card_meaning=("Completion, integration, accomplishment, travel")
     elif card_value == 40: 
-        card_meaning=("REVERSED: Seeking personal closure, short-cuts, delays")
+        card_meaning=("Seeking personal closure, short-cuts, delays")
     else:
         card_meaning=("Make sure to capitalize the card name.")
     return card_meaning
@@ -656,244 +607,244 @@ def image_pull_3(card_title):
     if card_title == 1:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-fool.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 2:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-fool.jpg")
         img2_rotate = img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 3:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-magician.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 4:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-magician.jpg")
         img2_rotate = img2.rotate(180)
-        img.paste(img2_rotate, (700, 100))
+        img.paste(img2_rotate, (550, 100))
         img.save("Final_card.jpg")
     elif card_title == 5:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-highpriestess.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 6:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-highpriestess.jpg")
         img2_rotate=img2.rotate(180)
-        img.paste(img2_rotate, (700, 100))
+        img.paste(img2_rotate, (550, 100))
         img.save("Final_card.jpg")
     elif card_title == 7:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-empress.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 8:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-empress.jpg")
         img2_rotate = img2.rotate(180)
-        img.paste(img2_rotate, (700, 100))
+        img.paste(img2_rotate, (550, 100))
         img.save("Final_card.jpg")
     elif card_title == 9:
         img = Image.open("First_card.jpg")
         img2 = Image.open("tarot-emperor.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Second_card.jpg")
     elif card_title == 10:
         img = Image.open("First_card.jpg")
         img2 = Image.open("tarot-emperor.jpg")
         img2_rotate=img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Second_card.jpg")
     elif card_title == 11:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-hierophant.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 12:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-hierophant.jpg")
         img2_rotate = img2.rotate(180)
-        img.paste(img2_rotate, (700, 100))
+        img.paste(img2_rotate, (550, 100))
         img.save("Final_card.jpg")
     elif card_title == 13:
         img = Image.open("First_card.jpg")
         img2 = Image.open("tarot-lovers.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Second_card.jpg")
     elif card_title == 14:
         img = Image.open("First_card.jpg")
         img2 = Image.open("tarot-lovers.jpg")
         img2_rotate = img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Second_card.jpg")
     elif card_title == 15:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-chariot.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 16:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-chariot.jpg")
         img2_rotate = img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 17:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-strength.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 18:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-strength.jpg")
         img2_rotate=img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 19:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-hermit.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 20:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-hermit.jpg")
         img2_rotate=img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 21:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-wheeloffortune.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 22:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-wheeloffortune.jpg")
         img2_rotate = img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 23:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-justice.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 24:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-justice.jpg")
         img2_rotate = img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 25:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-hangedman.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 26:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-hangedman.jpg")
         img2_rotate=img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 27:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-death.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 28:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-death.jpg")
         img2_rotate=img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 29:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-tower.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 30:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-tower.jpg")
         img2_rotate=img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 31:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-star.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 32:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-star.jpg")
         img2_rotate=img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 33:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-moon.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 34:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-moon.jpg")
         img2_rotate=img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 35:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-sun.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 36:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-sun.jpg")
         img2_rotate=img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 37:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-judgement.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 38:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-judgement.jpg")
         img2_rotate=img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 39:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-world.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 40:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-world.jpg")
         img2_rotate=img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 41:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-devil.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 42:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-devil.jpg")
         img2_rotate=img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 43:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-temperance.jpg")
-        img.paste(img2, (700,100))
+        img.paste(img2, (550,100))
         img.save("Final_card.jpg")
     elif card_title == 44:
         img = Image.open("Second_card.jpg")
         img2 = Image.open("tarot-temperance.jpg")
         img2_rotate=img2.rotate(180)
-        img.paste(img2_rotate, (700,100))
+        img.paste(img2_rotate, (550,100))
         img.save("Final_card.jpg")
     else:
         print("error.")
@@ -911,7 +862,8 @@ card_1_meaning=card_value_meaning(card_1)
 card_2_meaning=card_value_meaning(card_2)
 card_3_meaning=card_value_meaning(card_3)
 
-results_font= ImageFont.truetype('PermanentMarker-Regular.ttf',24)
+results_title_font=ImageFont.truetype('PermanentMarket-Regular.ttf',80)
+results_font= ImageFont.truetype('PermanentMarker-Regular.ttf',50)
 results_title="Card meanings"
 past_card_meaning="Past: {}".format(card_1_meaning)
 present_card_meaning="Present: {}".format(card_2_meaning)
@@ -919,29 +871,29 @@ future_card_meaning="Future: {}".format(card_3_meaning)
 
 results= Image.open('results.jpg')
 image_editable = ImageDraw.Draw(results)
-image_editable.text((15,15), results_title, (15,17,18),font=results_font) 
+image_editable.text((30,30), results_title, (15,17,18),font=results_title_font) 
 results.save("results_title.jpg")
 
 past_results = Image.open('results_title.jpg')
 image_editable = ImageDraw.Draw(past_results)
-image_editable.text((30,30), past_card_meaning, (15,17,18), font=results_font)
+image_editable.text((100,15), past_card_meaning, (15,17,18), font=results_font)
 past_results.save('past_results.jpg')
 
 present_results = Image.open('past_results.jpg')
 image_editable = ImageDraw.Draw(present_results)
-image_editable.text((45,45), present_card_meaning, (15,17,18), font=results_font)
+image_editable.text((150,15), present_card_meaning, (15,17,18), font=results_font)
 present_results.save('present_results.jpg')
 
 final_results = Image.open('present_results.jpg')
 image_editable = ImageDraw.Draw(final_results)
-image_editable.text((60,60), future_card_meaning, (15,17,18), font=results_font)
+image_editable.text((200,15), future_card_meaning, (15,17,18), font=results_font)
 final_results.save('final_results.jpg')
 
 Ending_results=Image.open('final_results.jpg')
 
 Final=Image.open("Final_card.jpg")
-Final.paste(Ending_results(1050,100))
-Final.save()
+Final.paste(Ending_results,(1050,100))
+Final.save('final.jpg')
 Final.show()
 
 #card_name=input("Hello enter the card name you want to look up. Make sure to capitalize each letter of the card name:")
