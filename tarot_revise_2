@@ -911,7 +911,7 @@ card_1_meaning=card_value_meaning(card_1)
 card_2_meaning=card_value_meaning(card_2)
 card_3_meaning=card_value_meaning(card_3)
 
-results_font= ImageFont.truetype('tff title',200)
+results_font= ImageFont.truetype('PermanentMarker-Regular.ttf',24)
 results_title="Card meanings"
 past_card_meaning="Past: {}".format(card_1_meaning)
 present_card_meaning="Present: {}".format(card_2_meaning)
