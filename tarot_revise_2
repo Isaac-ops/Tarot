@@ -876,17 +876,17 @@ results.save("results_title.jpg")
 
 past_results = Image.open('results_title.jpg')
 image_editable = ImageDraw.Draw(past_results)
-image_editable.text((100,15), past_card_meaning, (15,17,18), font=results_font)
+image_editable.text((15,100), past_card_meaning, (15,17,18), font=results_font)
 past_results.save('past_results.jpg')
 
 present_results = Image.open('past_results.jpg')
 image_editable = ImageDraw.Draw(present_results)
-image_editable.text((150,15), present_card_meaning, (15,17,18), font=results_font)
+image_editable.text((15,150), present_card_meaning, (15,17,18), font=results_font)
 present_results.save('present_results.jpg')
 
 final_results = Image.open('present_results.jpg')
 image_editable = ImageDraw.Draw(final_results)
-image_editable.text((200,15), future_card_meaning, (15,17,18), font=results_font)
+image_editable.text((15,200), future_card_meaning, (15,17,18), font=results_font)
 final_results.save('final_results.jpg')
 
 Ending_results=Image.open('final_results.jpg')
