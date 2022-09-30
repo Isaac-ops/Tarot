@@ -862,7 +862,7 @@ card_1_meaning=card_value_meaning(card_1)
 card_2_meaning=card_value_meaning(card_2)
 card_3_meaning=card_value_meaning(card_3)
 
-results_title_font=ImageFont.truetype('PermanentMarket-Regular.ttf',80)
+results_title_font=ImageFont.truetype('PermanentMarker-Regular.ttf',80)
 results_font= ImageFont.truetype('PermanentMarker-Regular.ttf',50)
 results_title="Card meanings"
 past_card_meaning="Past: {}".format(card_1_meaning)
