@@ -39,16 +39,16 @@ if cardPullFacing1 == 0:
     cardMeaningNormPull = cardMeaningNorm[cardMeaningNormNum]
     cardMeaningNormFace = allCardFaces[cardMeaningNormNum]
     card1 = card(cardMeaningNormPull,cardMeaningNormFace,False)
-    cardImg1 = Image.open("tarot-{cardMeaningNormFace}.jpg")
+    cardImg1 = Image.open("tarot-{}.jpg".format(cardMeaningNormFace))
+    cardImg1_Norm = cardImg1.rotate(180)
+    cardImg1 = cardImg1_Norm
     print(card1)
 elif cardPullFacing1 == 1:
     cardMeaningRevNum = randint(0,21)
     cardMeaningRevPull = cardMeaningRev[cardMeaningRevNum]
     cardMeaningRevFace = allCardFaces[cardMeaningRevNum]
     card1 = card(cardMeaningRevPull,cardMeaningRevFace,True)
-    cardImg1 = Image.open("tarot-{cardMeaningRevFace}.jpg")
-    cardImg1_Rev = cardImg1.rotate(180)
-    cardImg1 = cardImg1_Rev
+    cardImg1 = Image.open("tarot-{}.jpg".format(cardMeaningRevFace))
     print(card1)
 else:
     print('error')
@@ -60,16 +60,16 @@ if cardPullFacing2 == 0:
     cardMeaningNormPull = cardMeaningNorm[cardMeaningNormNum]
     cardMeaningNormFace = allCardFaces[cardMeaningNormNum]
     card2 = card(cardMeaningNormPull,cardMeaningNormFace,False)
-    cardImg2 = Image.open("tarot-{cardMeaningNormFace}.jpg")
+    cardImg2 = Image.open("tarot-{}.jpg".format(cardMeaningNormFace))
+    cardImg2_Norm = cardImg2.rotate(180)
+    cardImg2 = cardImg2_Norm
     print(card2)
 elif cardPullFacing2 == 1:
     cardMeaningRevNum = randint(0,21)
     cardMeaningRevPull = cardMeaningRev[cardMeaningRevNum]
     cardMeaningRevFace = allCardFaces[cardMeaningRevNum]
     card2 = card(cardMeaningRevPull,cardMeaningRevFace,True)
-    cardImg2 = Image.open("tarot-{cardMeaningRevFace}.jpg")
-    cardImg2_Rev = cardImg2.rotate(180)
-    cardImg2 = cardImg2_Rev
+    cardImg2 = Image.open("tarot-{}.jpg".format(cardMeaningRevFace))
     print(card2)
 else:
     print('error')
@@ -81,16 +81,16 @@ if cardPullFacing3 == 0:
     cardMeaningNormPull = cardMeaningNorm[cardMeaningNormNum]
     cardMeaningNormFace = allCardFaces[cardMeaningNormNum]
     card3 = card(cardMeaningNormPull,cardMeaningNormFace,False)
-    cardImg3 = Image.open("tarot-{cardMeaningNormFace}.jpg")
+    cardImg3 = Image.open("tarot-{}.jpg".format(cardMeaningNormFace))
+    cardImg3_Norm = cardImg3.rotate(180)
+    cardImg3 = cardImg3_Norm
     print(card3)
 elif cardPullFacing3 == 1:
     cardMeaningRevNum = randint(0,21)
     cardMeaningRevPull = cardMeaningRev[cardMeaningRevNum]
     cardMeaningRevFace = allCardFaces[cardMeaningRevNum]
     card3 = card(cardMeaningRevPull,cardMeaningRevFace,True)
-    cardImg3 = Image.open("tarot-{cardMeaningRevFace}.jpg")
-    cardImg3_Rev = cardImg3.rotate(180)
-    cardImg3 = cardImg3_Rev
+    cardImg3 = Image.open("tarot-{}.jpg".format(cardMeaningRevFace))
     print(card3)
 else:
     print('error')
